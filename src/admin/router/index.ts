@@ -4,7 +4,7 @@ import {
   } from 'vue-router'
   import About from '../components/About.vue'
   import Home from '../components/Home.vue'
-
+import Button from "../components/Button.vue";
   
   const routes = [
     {
@@ -16,6 +16,11 @@ import {
       path: '/about',
       name: 'About',
       component: About
+    },
+    {
+      path:'/btn',
+      name: 'Btn',
+      component: Button
     }
   ]
   
@@ -25,4 +30,3 @@ import {
   })
   
   export default router
-  
