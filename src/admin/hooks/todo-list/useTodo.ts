@@ -1,8 +1,12 @@
-import {ref,computed} from 'vue'
+import {ref,computed,watchEffect} from 'vue'
 
 export default function useTodos() {
   let title = ref("");
   let todos = ref([{ title: "学习Vue", done: false }]);
+ 
+  watchEffect(()=>{
+    localStorage.setItem('todos',JSON.stringify(todos.value))
+  })
   /**
    *@description 添加todo
    */
